@@ -1,21 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 const Delete = (props) => {
 
     const deleteHandler = async (e) => {
-        await axios.delete(`https://cors-anywhere.herokuapp.com/https://akrima-employe.herokuapp.com/employe/${e.target.id}`, {
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        }).then(res => {
-            console.log(res);
-        })
+        await axios.delete(`https://cors-anywhere.herokuapp.com/https://akrima-employe.herokuapp.com/employe/${e.target.id}`)
     }
 
 
     return (
-        <span className="nav-link aClass" id={props.id} onClick={(e) => deleteHandler(e)} style={{ cursor: "pointer" }}>Delete</span>
+        <Link className="nav-link aClass" id={props.id} onClick={(e) => deleteHandler(e)} style={{ cursor: "pointer" }} to="/">Delete</Link>
     )
 }
 
