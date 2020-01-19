@@ -1,0 +1,15 @@
+.nav-global-bg {
+	background-color: #009688;
+	nav.navbar-bg {
+		overflow: hidden;
+		color: rgba(255, 255, 255, 0.6);
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+.aClass {
+	color: #fff!important;
+	&:hover {
+		color: rgba(255, 255, 255, 0.6)!important;
+	}
+}
