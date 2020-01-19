@@ -16,6 +16,7 @@ const DatatablePage = (response) => {
     const [currentEmploye, setCurrentEmploye] = useState(undefined)
 
     const setPagination = (e, indexStart, indexEnd, activeIndex)=>{
+        console.log("object")
         setStart(indexStart)
         setEnd(indexEnd)
         setActive(activeIndex)
