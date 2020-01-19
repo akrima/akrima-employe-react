@@ -39,6 +39,7 @@ const DatatablePage = (response) => {
     }
 
    useEffect(() => {
+       console.log(response.response)
         setSlicedArray(response.response.slice(start, end))
    }, [])
 
