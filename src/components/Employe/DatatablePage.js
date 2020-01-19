@@ -43,6 +43,10 @@ const DatatablePage = (response) => {
         setSlicedArray(response.response.slice(start, end))
    }, [])
 
+   const comingSoon=(e)=>{
+        e.preventDefault()
+        alert("Bientôt disponible / coming soon!")
+   }
 
     return (
         <>
@@ -72,7 +76,7 @@ const DatatablePage = (response) => {
                         <td>{formatDate(employe.dateEmbauche)}</td>
                         <td>{employe.salary} $</td>
                         <td><span className="nav-link aClass" onClick={() => {setModalShow(true); setCurrentEmploye(employe)}} style={{cursor:"pointer"}}>Details</span></td>
-                        <td><a href="#" className="nav-link aClass"id={employe.id} onClick={alert("Bientôt disponible / coming soon!")}>Edit</a></td>
+                        <td><a href="#" className="nav-link aClass"id={employe.id} onClick={comingSoon}>Edit</a></td>
                         <td><Delete id={employe.id} /></td>
                     </tr>
                 })}
