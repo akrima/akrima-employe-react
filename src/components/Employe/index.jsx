@@ -4,7 +4,7 @@ import DatatablePage from './DatatablePage';
 
 const Employe = () => {
 
-    const res = useFetch("https://akrima-employe.herokuapp.com/all", {});
+    const res = useFetch("https://cors-anywhere.herokuapp.com/https://akrima-employe.herokuapp.com/all", {});
 
     if(res.error){
        console.log(res.error)

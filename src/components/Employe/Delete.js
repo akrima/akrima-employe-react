@@ -4,7 +4,7 @@ import axios from 'axios'
 const Delete = (props) => {
 
     const deleteHandler = async (e) => {
-        await axios.delete(`https://akrima-employe.herokuapp.com/employe/${e.target.id}`, {
+        await axios.delete(`https://cors-anywhere.herokuapp.com/https://akrima-employe.herokuapp.com/employe/${e.target.id}`, {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest'
             }
